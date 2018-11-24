@@ -23,6 +23,7 @@ class Hanoi:
                  if self.state[i] == pos_from:
                     self.state[i] = pos_to
                     break
+        return self
 
     def valid_moves(self, new_states_only=False):
             valid_moves = [(i, j) for i in range(self.towers_count) for j in range(self.towers_count) if self.is_valid_move(i,j)]

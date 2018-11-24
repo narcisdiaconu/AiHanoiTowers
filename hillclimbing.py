@@ -20,8 +20,7 @@ class HillClimbing:
         random.shuffle(valid_moves)
         best_fitness = -1
         for valid_move in valid_moves:
-            hanoi_copy = self.hanoi.copy()
-            hanoi_copy.transition(valid_move[0], valid_move[1])
+            hanoi_copy = self.hanoi.copy().transition(valid_move[0], valid_move[1])
             current_fitness = fitness(hanoi_copy)
             if current_fitness > best_fitness:
                 best_move = valid_move
@@ -33,7 +32,11 @@ class HillClimbing:
             valid_moves = self.hanoi.valid_moves(True)
             if valid_moves:
                 chosen_move = self.choose(valid_moves)
-                self.hanoi.transition(chosen_move[0], chosen_move[1])
+                hanoi_copy = self.hanoi.copy().transition(chosen_move[0], chosen_move[1])
+                if fitness(hanoi_copy) >= fitness(self.hanoi):
+                    self.hanoi.transition(chosen_move[0], chosen_move[1])
+                else:
+                    return False
                 moves_count -= 1
             else:
                 return False
@@ -63,5 +66,3 @@ for i in range(iterations):
 
 print("avg: " + str(moves_sum / success_count))
 print("failed: " + str(iterations - success_count))
-
-print(h.state)
