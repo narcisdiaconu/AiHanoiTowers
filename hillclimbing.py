@@ -1,48 +1,6 @@
 from base import *
 import random
 
-#PLACEHOLDER
-class HanoiWrapper(Hanoi):
-    def init(self):
-        super().init()
-        self.state_history = []
-        self.moves_history = []
-
-    def tower(self, tower_index):
-       return [disk for disk in range(self.disks_count) if self.disk_position(disk) == tower_index][::-1]
-
-    def disk_position(self, disk_index):
-        return self.state[disk_index]
-
-    def valid_moves(self, new_states_only=False):
-        valid_moves = [(i, j) for i in range(self.towers_count) for j in range(self.towers_count) if self.is_valid_move(i,j)]
-        if new_states_only:
-            for (i, valid_move) in enumerate(valid_moves):
-                hanoi_copy = self.copy()
-                hanoi_copy.transition(valid_move[0], valid_move[1])
-                if hanoi_copy.state in self.state_history:
-                    del valid_moves[i]
-        return valid_moves
-
-    def copy(self):
-        copy = HanoiWrapper(self.towers_count, self.disks_count)
-        copy.state = self.state_copy()
-        return copy
-
-    def state_copy(self):
-        return [i for i in self.state]
-
-    def transition(self, pos_from, pos_to):
-        self.state_history += [self.state_copy()]
-        self.moves_history += [(pos_from, pos_to)]
-        super().transition(pos_from, pos_to)
-
-    def __str__(self):
-        s = ""
-        for tower in range(self.towers_count):
-            s += str(tower) + ": " + str(self.tower(tower)) + "\n"
-        return s
-
 def fitness(hanoi):
     big_disk_position = hanoi.disk_position(hanoi.disks_count - 1)
     if big_disk_position == 0:
@@ -91,7 +49,7 @@ class HillClimbing:
         return False
         
           
-h = HanoiWrapper(3, 6)
+h = Hanoi(3, 3)
 hc = HillClimbing(h)
 
 iterations = 1000

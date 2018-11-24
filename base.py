@@ -5,16 +5,35 @@ class Hanoi:
         self.init()
 
     def init(self):
+        self.state_history = []
+        self.moves_history = []
         self.state = [0] * self.disks_count
 
+    def tower(self, tower_index):
+       return [disk for disk in range(self.disks_count) if self.disk_position(disk) == tower_index][::-1]
+
+    def disk_position(self, disk_index):
+        return self.state[disk_index]
+
     def transition(self, pos_from, pos_to):
+        self.state_history += [self.state_copy()]
+        self.moves_history += [(pos_from, pos_to)]
         if self.is_valid_move(pos_from, pos_to):
             for i in range(len(self.state)):
                  if self.state[i] == pos_from:
                     self.state[i] = pos_to
                     break
 
-
+    def valid_moves(self, new_states_only=False):
+            valid_moves = [(i, j) for i in range(self.towers_count) for j in range(self.towers_count) if self.is_valid_move(i,j)]
+            if new_states_only:
+                for (i, valid_move) in enumerate(valid_moves):
+                    hanoi_copy = self.copy()
+                    hanoi_copy.transition(valid_move[0], valid_move[1])
+                    if hanoi_copy.state in self.state_history:
+                        del valid_moves[i]
+            return valid_moves
+    
     def is_valid_move(self, pos_from, pos_to):
         if pos_from == pos_to:
             return False
@@ -51,4 +70,15 @@ class Hanoi:
         return True
 
     def copy(self):
+        copy = Hanoi(self.towers_count, self.disks_count)
+        copy.state = self.state_copy()
+        return copy
+
+    def state_copy(self):
         return [i for i in self.state]
+
+    def __str__(self):
+        s = ""
+        for tower in range(self.towers_count):
+            s += str(tower) + ": " + str(self.tower(tower)) + "\n"
+        return s
