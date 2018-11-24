@@ -1,41 +1,82 @@
 from base import *
 
-def getAccesibleStates(hanoi):
+def getAccesibleStates(hanoi, history):
     accesibleStates = []
-    for move in hanoi.valid_moves(new_states_only=True):
+    for move in hanoi.valid_moves(True):
         hanoiCopy = hanoi.copy()
-        state_copy = []
-        for item in hanoi.state_history:
-            state_copy.append(item)
-        hanoiCopy.state_history = state_copy
         hanoiCopy.transition(move[0], move[1])
-        accesibleStates.append(hanoiCopy)
+        if hanoiCopy.state not in history:
+            accesibleStates.append(hanoiCopy.copy())
     return accesibleStates
+
+class Tree:
+    def __init__(self, hanoi):
+        self.node = hanoi
+        self.childs = []
+    
+    def set_childs(self, history):
+        for item in getAccesibleStates(self.node, history):
+            self.childs.append(Tree(item))
+
+    def __str__(self, level=1):
+        s = ""
+        s+= self.node.state.__str__() + '\n'
+        for child in self.childs:
+            s+= '\t' * level + child.__str__(level+1)
+        return s
 
 class IterativeDeepeningSearch:
     def __init__(self, hanoi, startHeight):
         self.hanoi = hanoi
         self.height = startHeight
         self.result = 0
+        self.count_moves = 0
+        self.tree = Tree(hanoi)
+        self.tree.set_childs([])
+        self.history = [hanoi.state]
         
-    def run(self, hanoi, height):
+    def run(self, hanoi, depth):
         if hanoi.end():
             self.result = hanoi
+            self.result_moves = self.count_moves
             return 0
-        elif height == self.height:
+        elif depth == self.height:
             return 0
-        for state in getAccesibleStates(hanoi):
+        for state in getAccesibleStates(hanoi, self.history):
             if self.result != 0:
                 break
-            self.run(state.copy(), height+1)
+            self.count_moves +=1
+            self.run(state.copy(), depth+1)
+            self.count_moves -=1
     
+    def runTree(self, tree, depth):
+        if tree.node.end():
+            self.result = tree.node
+            self.result_moves = self.count_moves
+            return 0
+        elif depth == self.height:
+            return 0
+        for child in tree.childs:
+            self.history.append(child.node.state_copy())
+            self.count_moves +=1
+            if child.childs == []:
+                child.set_childs(self.history)
+            self.runTree(child, depth+1)
+            self.count_moves -=1
+        for i in range(len(tree.childs)):
+            self.history.pop()
+
     def getResult(self):
         while self.result == 0:
+            # self.runTree(self.tree, 0)
             self.run(self.hanoi, 0)
             self.height += 1
-        return self.result.state
+            # print(self.tree)
+            print(self.height)
+        print(self.tree)
+        return (self.result.state, self.result_moves)
 
-h = Hanoi(10,4)
+h = Hanoi(5,5)
 
-ids = IterativeDeepeningSearch(h, 5)
+ids = IterativeDeepeningSearch(h, 10)
 print(ids.getResult())
