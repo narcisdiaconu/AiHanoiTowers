@@ -72,6 +72,7 @@ class Hanoi:
     def copy(self):
         copy = Hanoi(self.towers_count, self.disks_count)
         copy.state = self.state_copy()
+        copy.state_history = [i for i in self.state_history]
         return copy
 
     def state_copy(self):
