@@ -58,26 +58,23 @@ class HillClimbing:
     def __init__(self, hanoi):
         self.hanoi = hanoi
 
-    def choose(self, fitnesses):
-        best_move = fitnesses[0][0]
-        best_fitness = fitnesses[0][1]
-        for move, fitness in fitnesses:
-            if fitness > best_fitness:
-                best_move = move
-                best_fitness = fitness
+    def choose(self, valid_moves):
+        random.shuffle(valid_moves)
+        best_fitness = -1
+        for valid_move in valid_moves:
+            hanoi_copy = self.hanoi.copy()
+            hanoi_copy.transition(valid_move[0], valid_move[1])
+            current_fitness = fitness(hanoi_copy)
+            if current_fitness > best_fitness:
+                best_move = valid_move
+                best_fitness = current_fitness
         return best_move
 
     def play(self, moves_count=100):
         while moves_count > 0 and not self.hanoi.end():
-            valid_moves = self.hanoi.valid_moves()
+            valid_moves = self.hanoi.valid_moves(True)
             if valid_moves:
-                fitnesses = [] 
-                for valid_move in valid_moves:
-                    hanoi_copy = self.hanoi.copy()
-                    hanoi_copy.transition(valid_move[0], valid_move[1])
-                    fitnesses += [(valid_move, fitness(hanoi_copy))]
-                random.shuffle(fitnesses)
-                chosen_move = self.choose(fitnesses)
+                chosen_move = self.choose(valid_moves)
                 self.hanoi.transition(chosen_move[0], chosen_move[1])
                 moves_count -= 1
             else:
@@ -85,22 +82,28 @@ class HillClimbing:
         return self.hanoi.end()
 
     def solution(self, iterations=100):
-        moves_count = (2 ** self.hanoi.disks_count - 1) * 10
+        moves_count = (2 ** self.hanoi.disks_count - 1) * 3
         for i in range(iterations):
+            self.hanoi.init()
             result = self.play(moves_count)
             if result:
-                print(i)
                 return True
-            else:
-                self.hanoi.init()
         return False
         
-        
-            
-h = HanoiWrapper(3, 3)
-
+          
+h = HanoiWrapper(3, 6)
 hc = HillClimbing(h)
-print(hc.solution())
-print(h.state_history)
+
+iterations = 1000
+moves_sum = 0
+success_count = 0
+for i in range(iterations):
+    result = hc.solution()
+    if result:
+        moves_sum += len(h.moves_history)
+        success_count += 1
+
+print("avg: " + str(moves_sum / success_count))
+print("failed: " + str(iterations - success_count))
+
 print(h.state)
-print(str(len(h.moves_history)) + " moves")
