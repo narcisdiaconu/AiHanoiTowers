@@ -1,0 +1,8 @@
+towers: 3 disks: 3
+len: 7
+number of states until reach final: 37
+
+towers: 3 disks: 4
+len: 15
+number of states until reach final: 4191
+

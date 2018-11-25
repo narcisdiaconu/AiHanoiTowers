@@ -8,10 +8,12 @@ class UniformCost:
         self.states = [[hanoi.state,0]]
         self.result = 0
         self.tree = 0
+        self.no_transitions = 0
 
     def run(self):
         bfs_list = [(self.hanoi, 0)]
         while len(bfs_list) > 0:
+            self.no_transitions +=1
             accesible_state = getAccesibleStates(bfs_list[0][0], [])
             for state in accesible_state:
                 added = False
@@ -26,7 +28,7 @@ class UniformCost:
             del bfs_list[0]
 
 if __name__ == "__main__":
-    h = Hanoi(5, 5)
+    h = Hanoi(5, 6)
     uc = UniformCost(h)
     uc.run()
     print(uc.result)
