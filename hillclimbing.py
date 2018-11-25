@@ -51,18 +51,27 @@ class HillClimbing:
                 return True
         return False
         
-          
-h = Hanoi(3, 3)
-hc = HillClimbing(h)
+string = ""
 
-iterations = 1000
-moves_sum = 0
-success_count = 0
-for i in range(iterations):
-    result = hc.solution()
-    if result:
-        moves_sum += len(h.moves_history)
-        success_count += 1
+for i in range(3, 7):
+    for j in range(3, 7):
+        h = Hanoi(i, j)
+        hc = HillClimbing(h)
 
-print("avg: " + str(moves_sum / success_count))
-print("failed: " + str(iterations - success_count))
+        iterations = 1000
+        moves_sum = 0
+        success_count = 0
+
+        for k in range(iterations):
+            result = hc.solution()
+            if result:
+                moves_sum += len(h.moves_history)
+                success_count += 1
+        
+        string += "towers: " + str(i) + " disks: " + str(j) + "\n"
+        string += "avg: " + str(moves_sum / success_count) + "\n"
+        string += "failed: " + str(iterations - success_count) + "\n\n"
+
+fd = open("hillclimb-stats.txt", "w")   
+fd.write(string)
+fd.close()
