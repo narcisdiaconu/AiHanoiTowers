@@ -1,16 +1,36 @@
 towers: 3 disks: 3
-avg: 16.0
+avg: 19.5
 failed: 0
 
 towers: 3 disks: 4
-avg: 36.0
+avg: 45.0
 failed: 1
 
+towers: 3 disks: 5
+avg: -1
+failed: 2
+
 towers: 4 disks: 3
-avg: 12.5
+avg: 16.5
 failed: 0
 
 towers: 4 disks: 4
-avg: 40.0
+avg: 38.0
+failed: 0
+
+towers: 4 disks: 5
+avg: 73.0
+failed: 0
+
+towers: 5 disks: 3
+avg: 14.5
+failed: 0
+
+towers: 5 disks: 4
+avg: 26.5
+failed: 0
+
+towers: 5 disks: 5
+avg: 72.5
 failed: 0
 

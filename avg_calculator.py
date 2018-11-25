@@ -17,8 +17,10 @@ def calculate(towers_max_count, disks_max_count, ai, filename, iterations=1000):
                     moves_sum += len(hanoi.moves_history)
                     success_count += 1
             
+            avg = moves_sum / success_count if success_count != 0 else -1
+
             string += "towers: " + str(i) + " disks: " + str(j) + "\n"
-            string += "avg: " + str(moves_sum / success_count) + "\n"
+            string += "avg: " + str(avg) + "\n"
             string += "failed: " + str(iterations - success_count) + "\n\n"
 
     fd = open(filename, "w")   
