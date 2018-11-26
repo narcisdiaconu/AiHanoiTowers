@@ -1,36 +1,64 @@
 towers: 3 disks: 3
-avg: 16.5
+avg: 12.961
 failed: 0
 
 towers: 3 disks: 4
-avg: 32.5
+avg: 36.087
 failed: 0
 
 towers: 3 disks: 5
-avg: 88.0
-failed: 1
+avg: 81.87288135593221
+failed: 882
+
+towers: 3 disks: 6
+avg: -1
+failed: 1000
 
 towers: 4 disks: 3
-avg: 9.5
+avg: 12.925
 failed: 0
 
 towers: 4 disks: 4
-avg: 29.5
+avg: 21.08
 failed: 0
 
 towers: 4 disks: 5
-avg: 57.0
+avg: 52.272
+failed: 0
+
+towers: 4 disks: 6
+avg: 120.81
 failed: 0
 
 towers: 5 disks: 3
-avg: 9.5
+avg: 13.072
 failed: 0
 
 towers: 5 disks: 4
-avg: 33.0
+avg: 21.024
 failed: 0
 
 towers: 5 disks: 5
-avg: 46.0
+avg: 31.753
+failed: 0
+
+towers: 5 disks: 6
+avg: 69.74
+failed: 0
+
+towers: 6 disks: 3
+avg: 12.839
+failed: 0
+
+towers: 6 disks: 4
+avg: 20.956
+failed: 0
+
+towers: 6 disks: 5
+avg: 31.319
+failed: 0
+
+towers: 6 disks: 6
+avg: 44.13
 failed: 0
 
