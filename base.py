@@ -38,7 +38,7 @@ class Hanoi:
     def is_valid_move(self, pos_from, pos_to):
         if pos_from == pos_to:
             return False
-        elif not (0 <= pos_from < self.disks_count) or not (0 <= pos_to < self.disks_count):
+        elif not (0 <= pos_from < self.towers_count) or not (0 <= pos_to < self.towers_count):
             return False
         else:
             found = False
