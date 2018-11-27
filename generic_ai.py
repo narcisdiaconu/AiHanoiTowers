@@ -12,7 +12,7 @@ class GenericAI:
 
     def play(self, moves_count=1):
         while moves_count > 0 and not self.hanoi.end():
-            valid_moves = self.hanoi.valid_moves()
+            valid_moves = self.hanoi.valid_moves(new_states_only=True)
             if valid_moves:
                 try:
                     chosen_move = self.choose(self.hanoi, valid_moves)
@@ -24,9 +24,9 @@ class GenericAI:
                 return False
         return self.hanoi.end()
 
-    def solution(self, iterations=100):
-        moves_count = (2 ** self.hanoi.disks_count - 1) * 3
-        for i in range(iterations):
+    def solution(self, number_of_attempts=1000, tolerance=7):
+        moves_count = (2 ** self.hanoi.disks_count - 1) * tolerance
+        for i in range(number_of_attempts):
             self.hanoi.init()
             result = self.play(moves_count)
             if result:
