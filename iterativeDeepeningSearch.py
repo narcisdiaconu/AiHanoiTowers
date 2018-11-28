@@ -75,15 +75,15 @@ class IterativeDeepeningSearch:
             self.count_moves -=1
         for i in range(len(tree.childs)):
             self.history.pop()
-
+            
     def getResult(self):
         while self.result == 0:
             self.no_transitions = 0
-            self.run(self.hanoi, 0)
+            self.run(self.hanoi, 1)
             self.height += 1
         return (self.result.state, self.result_moves, self.no_transitions)
 
 if __name__ == "__main__":
-    h = Hanoi(3, 6, 0, 2)
-    ids = IterativeDeepeningSearch(h, 5)
+    h = Hanoi(4, 4)
+    ids = IterativeDeepeningSearch(h, 16)
     print(ids.getResult())

@@ -1,6 +1,6 @@
 from base import *
 from iterativeDeepeningSearch import getAccesibleStates
-
+from hillclimbing_ai import fitness
 class AStar():
     def __init__(self, hanoi):
         self.hanoi = hanoi
@@ -11,6 +11,22 @@ class AStar():
     def largest_f_score(self, accesible_hanois, g_score):
         accesible_states = sorted(accesible_hanois, key=lambda x: g_score[x.stable_state] + self.h_score(x))
         return accesible_states[-1]
+
+    def reconstruct(self, came_from, current):
+        current = current.stable_state
+        path = [current]
+        while current in came_from.keys():
+            current = came_from[current]
+            path.append(current)
+        path.reverse()
+        # for i in range(len(path)-1, 0, -1):
+        #     for j in range(0, i - 1):
+        #         hanoi = self.hanoi.copy()
+        #         hanoi.state = list(path[j])
+        #         if path[i] in [hanoi.stable_state for hanoi in getAccesibleStates(hanoi,[])]:
+        #             print(str(i) + " <- " + str(j))
+
+        return path
 
     def play(self):
         closed_set = []
@@ -25,7 +41,7 @@ class AStar():
             current = self.largest_f_score(open_set, g_score)
             # print(current)
             if current.end():
-                return current #reconstruct
+                return self.reconstruct(came_from, current)
 
             open_set.remove(current)
             closed_set.append(current)
@@ -46,9 +62,9 @@ class AStar():
                 
 
 
-hanoi = Hanoi(3, 5)
+hanoi = Hanoi(3, 3)
 astar = AStar(hanoi)
 
 hanoi = astar.play()
 
-print(len(hanoi.moves_history))
+print(hanoi)
