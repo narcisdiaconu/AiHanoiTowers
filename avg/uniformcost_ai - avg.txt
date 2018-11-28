@@ -6,3 +6,59 @@ towers: 3 disks: 4
 len: 15
 number of states until reach final: 60
 
+towers: 3 disks: 5
+len: 31
+number of states until reach final: 196
+
+towers: 3 disks: 6
+len: 63
+number of states until reach final: 644
+
+towers: 4 disks: 3
+len: 7
+number of states until reach final: 16
+
+towers: 4 disks: 4
+len: 9
+number of states until reach final: 221
+
+towers: 4 disks: 5
+len: 13
+number of states until reach final: 983
+
+towers: 4 disks: 6
+len: 17
+number of states until reach final: 3971
+
+towers: 5 disks: 3
+len: 7
+number of states until reach final: 16
+
+towers: 5 disks: 4
+len: 9
+number of states until reach final: 221
+
+towers: 5 disks: 5
+len: 11
+number of states until reach final: 3038
+
+towers: 5 disks: 6
+len: 15
+number of states until reach final: 15555
+
+towers: 6 disks: 3
+len: 7
+number of states until reach final: 16
+
+towers: 6 disks: 4
+len: 9
+number of states until reach final: 221
+
+towers: 6 disks: 5
+len: 11
+number of states until reach final: 3038
+
+towers: 6 disks: 6
+len: 13
+number of states until reach final: 46457
+

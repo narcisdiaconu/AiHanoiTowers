@@ -28,19 +28,19 @@ for i in range(16):
 file.close()
 file_write.close()
 
-file = open("instante.txt", 'r')
-file_write = open("./avg/uniformcost_ai - avg.txt", 'w')
+# file = open("instante.txt", 'r')
+# file_write = open("./avg/uniformcost_ai - avg.txt", 'w')
 
-for i in range(16):
-    instanta = file.readline()
-    n = int(instanta[0])
-    m = int(instanta[2])
+# for i in range(16):
+#     instanta = file.readline()
+#     n = int(instanta[0])
+#     m = int(instanta[2])
 
-    hanoi = Hanoi(n, m)
-    uc = UniformCost(hanoi)
-    uc.run()
-    string = "towers: " + str(n) + " disks: " + str(m) + '\n' + "len: " + str(uc.result[0][1]) + "\n" + "number of states until reach final: " + str(uc.no_transitions) + "\n\n"
-    print(string)
-    file_write.write(string)
+#     hanoi = Hanoi(n, m)
+#     uc = UniformCost(hanoi)
+#     uc.run()
+#     string = "towers: " + str(n) + " disks: " + str(m) + '\n' + "len: " + str(uc.result[0][1]) + "\n" + "number of states until reach final: " + str(uc.no_transitions) + "\n\n"
+#     print(string)
+#     file_write.write(string)
 
-file_write.close()
+# file_write.close()
