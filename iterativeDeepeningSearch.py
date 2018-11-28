@@ -38,6 +38,8 @@ class IterativeDeepeningSearch:
         self.result_moves = 0
         
     def run(self, hanoi, depth):
+        if self.result != 0:
+            return 0
         self.no_transitions +=1
         if hanoi.end():
             self.result = hanoi
@@ -45,27 +47,30 @@ class IterativeDeepeningSearch:
             return 0
         elif depth == self.height:
             return 0
-        for state in getAccesibleStates(hanoi, self.history):
-            if self.result != 0:
-                break
+        available_states = getAccesibleStates(hanoi, self.history)
+        for state in available_states:
             self.history.append(state.state_copy())
+        for state in available_states:
             self.count_moves +=1
             self.run(state.copy(), depth+1)
             self.count_moves -=1
+        for i in range(len(available_states)):
             self.history.pop()
     
     def runTree(self, tree, depth):
+        if self.result != 0:
+            return 0;
         if tree.node.end():
             self.result = tree.node
             self.result_moves = self.count_moves
             return 0
         if depth == self.height:
             return 0
+        if tree.childs == []:
+            tree.set_childs(self.history)
         for child in tree.childs:
             self.history.append(child.node.state_copy())
             self.count_moves +=1
-            if child.childs == []:
-                child.set_childs(self.history)
             self.runTree(child, depth+1)
             self.count_moves -=1
         for i in range(len(tree.childs)):
@@ -73,16 +78,12 @@ class IterativeDeepeningSearch:
 
     def getResult(self):
         while self.result == 0:
-            self.runTree(self.tree, 1)
             self.no_transitions = 0
-            # self.run(self.hanoi, 0)
+            self.run(self.hanoi, 0)
             self.height += 1
-            print(self.tree)
-            # print(self.height)
-        # print(self.tree)
         return (self.result.state, self.result_moves, self.no_transitions)
 
 if __name__ == "__main__":
-    h = Hanoi(4, 4, 1, 2)
+    h = Hanoi(3, 6, 0, 2)
     ids = IterativeDeepeningSearch(h, 5)
     print(ids.getResult())
