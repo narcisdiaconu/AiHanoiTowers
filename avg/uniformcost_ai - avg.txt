@@ -1,6 +1,6 @@
 towers: 3 disks: 3
 len: 7
-number of states until reach final: 16
+number of states until reach final: 18
 
 towers: 3 disks: 4
 len: 15
@@ -8,57 +8,85 @@ number of states until reach final: 60
 
 towers: 3 disks: 5
 len: 31
-number of states until reach final: 196
-
-towers: 3 disks: 6
-len: 63
-number of states until reach final: 644
+number of states until reach final: 206
 
 towers: 4 disks: 3
-len: 7
-number of states until reach final: 16
+len: 5
+number of states until reach final: 27
 
 towers: 4 disks: 4
 len: 9
-number of states until reach final: 221
+number of states until reach final: 238
 
 towers: 4 disks: 5
 len: 13
 number of states until reach final: 983
 
-towers: 4 disks: 6
-len: 17
-number of states until reach final: 3971
-
 towers: 5 disks: 3
-len: 7
-number of states until reach final: 16
+len: 5
+number of states until reach final: 59
 
 towers: 5 disks: 4
-len: 9
-number of states until reach final: 221
+len: 7
+number of states until reach final: 384
 
 towers: 5 disks: 5
 len: 11
-number of states until reach final: 3038
-
-towers: 5 disks: 6
-len: 15
-number of states until reach final: 15555
+number of states until reach final: 3086
 
 towers: 6 disks: 3
-len: 7
-number of states until reach final: 16
+len: 5
+number of states until reach final: 111
 
 towers: 6 disks: 4
-len: 9
-number of states until reach final: 221
+len: 7
+number of states until reach final: 914
 
 towers: 6 disks: 5
-len: 11
-number of states until reach final: 3038
+len: 9
+number of states until reach final: 6461
 
-towers: 6 disks: 6
-len: 13
-number of states until reach final: 46457
+towers: 7 disks: 3
+len: 5
+number of states until reach final: 189
+
+towers: 7 disks: 4
+len: 7
+number of states until reach final: 1840
+
+towers: 7 disks: 5
+len: 9
+number of states until reach final: 14891
+
+towers: 4 disks: 4
+len: 9
+number of states until reach final: 238
+
+towers: 8 disks: 3
+len: 5
+number of states until reach final: 299
+
+towers: 8 disks: 4
+len: 7
+number of states until reach final: 3318
+
+towers: 8 disks: 5
+len: 9
+number of states until reach final: 30121
+
+towers: 9 disks: 3
+len: 5
+number of states until reach final: 447
+
+towers: 9 disks: 4
+len: 7
+number of states until reach final: 5528
+
+towers: 3 disks: 6
+len: 63
+number of states until reach final: 644
+
+towers: 4 disks: 6
+len: 17
+number of states until reach final: 4046
 
