@@ -85,5 +85,5 @@ class IterativeDeepeningSearch:
 
 if __name__ == "__main__":
     h = Hanoi(4, 4)
-    ids = IterativeDeepeningSearch(h, 5)
+    ids = IterativeDeepeningSearch(h, 16)
     print(ids.getResult())

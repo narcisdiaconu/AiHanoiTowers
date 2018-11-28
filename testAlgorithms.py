@@ -29,6 +29,7 @@ count_moves = 0
 count_time = 0
 
 for inst in instances:
+    print(inst)
     n = inst[0]
     m = inst[1]
     hanoi = Hanoi(n, m)
@@ -42,7 +43,7 @@ for inst in instances:
     count_time += end
 
     string = "towers: " + str(n) + " disks: " + str(m) + '\n' + "len: " + str(result[1]) + "\n" + "number of states until reach final: " + str(result[2]) + "\n" + "time: " + str(end) + " seconds" +"\n\n"
-    print(string)
+    # print(string)
     file_write.write(string)
 string = "Average:" + "\n" + " - moves: " + str(count_moves / 25) + "\n" + " - time: " + str(count_time / 25)
 file_write.write(string)
@@ -54,6 +55,7 @@ count_moves = 0
 count_time = 0
 
 for inst in instances:
+    print(inst)
     n = inst[0]
     m = inst[1]
 
@@ -67,7 +69,7 @@ for inst in instances:
     count_moves += uc.no_transitions
     count_time += end
     string = "towers: " + str(n) + " disks: " + str(m) + '\n' + "len: " + str(uc.result[0][1]) + "\n" + "number of states until reach final: " + str(uc.no_transitions) + "\n" + "time: " + str(end) + " seconds" + "\n\n"
-    print(string)
+    # print(string)
     file_write.write(string)
 string = "Average:" + "\n" + " - moves: " + str(count_moves / 25) + "\n" + " - time: " + str(count_time / 25)
 file_write.write(string)
