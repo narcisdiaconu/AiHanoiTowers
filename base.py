@@ -5,7 +5,7 @@ class Hanoi:
         self.poz_init = poz_init;
         self.poz_final = poz_final - 1;
         if poz_final == -1:
-            self.poz_final = towers_count-1;
+            self.poz_final = towers_count - 1;
         self.init()
 
     def init(self):
@@ -75,7 +75,7 @@ class Hanoi:
         return True
 
     def copy(self):
-        copy = Hanoi(self.towers_count, self.disks_count)
+        copy = Hanoi(self.towers_count, self.disks_count, self.poz_init + 1, self.poz_final + 1)
         copy.state = self.state_copy()
         copy.state_history = [i for i in self.state_history]
         return copy
@@ -86,5 +86,5 @@ class Hanoi:
     def __str__(self):
         s = ""
         for tower in range(self.towers_count):
-            s += str(tower) + ": " + str(self.tower(tower)) + "\n"
+            s += str(tower + 1) + ": " + str(self.tower(tower)) + "\n"
         return s
