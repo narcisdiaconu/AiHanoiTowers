@@ -1,0 +1,152 @@
+sample_size: 1000  number_of_attempts: 100  tolerance: 4
+
+towers: 3  disks: 3  start: 0  end: 1
+avg length: 12.514
+avg attempts: 0.172
+avg duration: 0.0017097437396141652
+fails: 0
+
+towers: 3  disks: 3  start: 0  end: 2
+avg length: 13.499
+avg attempts: 0.185
+avg duration: 0.0017483166499209532
+fails: 0
+
+towers: 3  disks: 4  start: 0  end: 1
+avg length: 35.137
+avg attempts: 2.253
+avg duration: 0.017590771016436475
+fails: 0
+
+towers: 3  disks: 4  start: 0  end: 2
+avg length: 32.182
+avg attempts: 1.362
+avg duration: 0.01240105964305766
+fails: 0
+
+towers: 3  disks: 5  start: 0  end: 1
+avg length: 74.06338028169014
+avg attempts: 18.01106639839034
+avg duration: 0.2792495466197258
+fails: 6
+
+towers: 3  disks: 5  start: 2  end: 1
+avg length: 79.55254604550379
+avg attempts: 29.819068255687974
+avg duration: 0.4750890592533942
+fails: 77
+
+towers: 4  disks: 3  start: 0  end: 1
+avg length: 8.801
+avg attempts: 0.002
+avg duration: 0.0016765607967561208
+fails: 0
+
+towers: 4  disks: 3  start: 2  end: 3
+avg length: 9.1
+avg attempts: 0.001
+avg duration: 0.001588018451623725
+fails: 0
+
+towers: 4  disks: 3  start: 3  end: 2
+avg length: 8.994
+avg attempts: 0.004
+avg duration: 0.0017120862515616864
+fails: 0
+
+towers: 4  disks: 4  start: 1  end: 0
+avg length: 23.161
+avg attempts: 0.029
+avg duration: 0.005424559523553285
+fails: 0
+
+towers: 4  disks: 4  start: 1  end: 2
+avg length: 23.391
+avg attempts: 0.012
+avg duration: 0.00510940142476386
+fails: 0
+
+towers: 4  disks: 5  start: 1  end: 0
+avg length: 58.081
+avg attempts: 0.073
+avg duration: 0.01818836076647415
+fails: 0
+
+towers: 4  disks: 5  start: 3  end: 0
+avg length: 55.935
+avg attempts: 0.064
+avg duration: 0.015997655222567006
+fails: 0
+
+towers: 5  disks: 3  start: 1  end: 0
+avg length: 7.822
+avg attempts: 0.001
+avg duration: 0.001994838091419183
+fails: 0
+
+towers: 5  disks: 3  start: 1  end: 4
+avg length: 7.7
+avg attempts: 0.0
+avg duration: 0.001999111552125555
+fails: 0
+
+towers: 5  disks: 4  start: 0  end: 1
+avg length: 17.099
+avg attempts: 0.003
+avg duration: 0.005385402118002389
+fails: 0
+
+towers: 5  disks: 4  start: 2  end: 3
+avg length: 18.207
+avg attempts: 0.0
+avg duration: 0.0056600495612698296
+fails: 0
+
+towers: 5  disks: 5  start: 3  end: 2
+avg length: 38.016
+avg attempts: 0.002
+avg duration: 0.013623421947796487
+fails: 0
+
+towers: 6  disks: 3  start: 0  end: 1
+avg length: 7.294
+avg attempts: 0.0
+avg duration: 0.002446211145508755
+fails: 0
+
+towers: 6  disks: 3  start: 5  end: 1
+avg length: 7.34
+avg attempts: 0.0
+avg duration: 0.0027276063371668895
+fails: 0
+
+towers: 6  disks: 4  start: 1  end: 0
+avg length: 14.856
+avg attempts: 0.0
+avg duration: 0.005881816798499017
+fails: 0
+
+towers: 6  disks: 4  start: 1  end: 2
+avg length: 14.995
+avg attempts: 0.001
+avg duration: 0.006183833948978986
+fails: 0
+
+towers: 7  disks: 3  start: 0  end: 1
+avg length: 7.033
+avg attempts: 0.0
+avg duration: 0.0029675408797407953
+fails: 0
+
+towers: 7  disks: 4  start: 2  end: 0
+avg length: 13.793
+avg attempts: 0.0
+avg duration: 0.006610017825594696
+fails: 0
+
+towers: 8  disks: 3  start: 0  end: 1
+avg length: 6.985
+avg attempts: 0.0
+avg duration: 0.0033163116084607507
+fails: 0
+

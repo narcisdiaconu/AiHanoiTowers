@@ -1,4 +1,6 @@
-sample_size: 100  number_of_attempts: 100  tolerance: 3towers: 3  disks: 3
+sample_size: 100  number_of_attempts: 100  tolerance: 3
+
+towers: 3  disks: 3
 avg: 13.62
 failed: 0
 duration: 0.11815677083746312
