@@ -2,16 +2,16 @@ class Hanoi:
     def __init__(self, towers_count, disks_count, poz_init = 0, poz_final = -1):
         self.towers_count = towers_count
         self.disks_count = disks_count
-        self.poz_init = poz_init;
-        self.poz_final = poz_final - 1;
+        self.poz_init = poz_init
+        self.poz_final = poz_final
         if poz_final == -1:
-            self.poz_final = towers_count-1;
+            self.poz_final = towers_count-1
         self.init()
 
     def init(self):
         self.state_history = []
         self.moves_history = []
-        self.state = [self.poz_init - 1] * self.disks_count
+        self.state = [self.poz_init] * self.disks_count
 
     def tower(self, tower_index):
        return [disk for disk in range(self.disks_count) if self.disk_position(disk) == tower_index][::-1]
@@ -75,9 +75,10 @@ class Hanoi:
         return True
 
     def copy(self):
-        copy = Hanoi(self.towers_count, self.disks_count)
+        copy = Hanoi(self.towers_count, self.disks_count, self.poz_init, self.poz_final)
         copy.state = self.state_copy()
         copy.state_history = [i for i in self.state_history]
+        copy.moves_history = [i for i in self.moves_history]
         return copy
 
     def state_copy(self):

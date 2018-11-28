@@ -10,6 +10,6 @@ import time
 ai = hillclimbing_ai.HillClimbingAI(None)
 #ai = random_ai.RandomAI(None)
 start = time.perf_counter()
-avg = avg_calculator.average(3, 6, ai, sample_size=100, number_of_attempts=500, tolerance=4, return_fails=True)
+avg = avg_calculator.average(3, 3, ai, sample_size=100, number_of_attempts=500, tolerance=4, return_fails=True)
 elapsed = time.perf_counter() - start
 print("avg: {}  time: {}".format(avg, elapsed)) 

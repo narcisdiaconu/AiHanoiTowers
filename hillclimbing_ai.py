@@ -4,15 +4,11 @@ import random
 
 
 def fitness(hanoi):
-    big_disk_position = hanoi.disk_position(hanoi.disks_count - 1)
-    if big_disk_position == 0:
-        return 0
-    else:
-        sum = 0
-        for (disk_index, disk) in enumerate(hanoi.tower(big_disk_position)):
-            if (hanoi.disks_count - disk_index - 1) == disk:
-                sum += 1
-        return sum
+    sum = 0
+    for (disk_index, disk) in enumerate(hanoi.tower(hanoi.poz_final)):
+        if (hanoi.disks_count - disk_index - 1) == disk:
+            sum += 1
+    return sum
 
 class HillClimbingAI(GenericAI):
     def choose(self, hanoi, valid_moves):
