@@ -1,128 +1,128 @@
-towers: 3 disks: 3
+towers: 3 disks: 3 start: 0 end: 1
+len: 7
+number of states until reach final: 16
+time: 0.0009004449999565622 seconds
+
+towers: 3 disks: 3 start: 0 end: 2
 len: 7
 number of states until reach final: 18
-time: 0.0009253339999872878 seconds
+time: 0.0008888889999525418 seconds
 
-towers: 3 disks: 4
+towers: 3 disks: 4 start: 0 end: 1
+len: 15
+number of states until reach final: 65
+time: 0.0032617780000236962 seconds
+
+towers: 3 disks: 4 start: 0 end: 2
 len: 15
 number of states until reach final: 60
-time: 0.002928888999974788 seconds
+time: 0.00306711100006396 seconds
 
-towers: 3 disks: 5
+towers: 3 disks: 5 start: 0 end: 1
 len: 31
-number of states until reach final: 206
-time: 0.012750665999988087 seconds
+number of states until reach final: 196
+time: 0.011948888999995688 seconds
 
-towers: 4 disks: 3
+towers: 3 disks: 5 start: 2 end: 1
+len: 31
+number of states until reach final: 211
+time: 0.012859554999977263 seconds
+
+towers: 4 disks: 3 start: 0 end: 1
+len: 5
+number of states until reach final: 44
+time: 0.0036364449999837234 seconds
+
+towers: 4 disks: 3 start: 2 end: 3
+len: 5
+number of states until reach final: 28
+time: 0.0023613339999428717 seconds
+
+towers: 4 disks: 3 start: 3 end: 2
 len: 5
 number of states until reach final: 27
-time: 0.0022044439999717724 seconds
+time: 0.0022773339999275777 seconds
 
-towers: 4 disks: 4
+towers: 4 disks: 4 start: 1 end: 0
 len: 9
-number of states until reach final: 238
-time: 0.02480800000000727 seconds
+number of states until reach final: 228
+time: 0.024344000000041888 seconds
 
-towers: 4 disks: 5
+towers: 4 disks: 4 start: 1 end: 2
+len: 9
+number of states until reach final: 237
+time: 0.024359111000080702 seconds
+
+towers: 4 disks: 5 start: 1 end: 0
 len: 13
-number of states until reach final: 983
-time: 0.1686617780000006 seconds
+number of states until reach final: 991
+time: 0.17272000000002663 seconds
 
-towers: 5 disks: 3
+towers: 4 disks: 5 start: 3 end: 0
+len: 13
+number of states until reach final: 990
+time: 0.17292533299996649 seconds
+
+towers: 5 disks: 3 start: 1 end: 0
 len: 5
-number of states until reach final: 59
-time: 0.007456444000013107 seconds
+number of states until reach final: 90
+time: 0.011083555000027445 seconds
 
-towers: 5 disks: 4
-len: 7
-number of states until reach final: 384
-time: 0.07512977800001863 seconds
-
-towers: 3 disks: 5
-len: 31
-number of states until reach final: 206
-time: 0.013196889000028023 seconds
-
-towers: 6 disks: 3
+towers: 5 disks: 3 start: 1 end: 4
 len: 5
-number of states until reach final: 111
-time: 0.019944443999975192 seconds
-
-towers: 6 disks: 4
-len: 7
-number of states until reach final: 914
-time: 0.32659333300000526 seconds
-
-towers: 8 disks: 3
-len: 5
-number of states until reach final: 299
-time: 0.10110000000003083 seconds
-
-towers: 7 disks: 3
-len: 5
-number of states until reach final: 189
-time: 0.04545199999995475 seconds
-
-towers: 7 disks: 4
-len: 7
-number of states until reach final: 1840
-time: 1.238518666999994 seconds
-
-towers: 3 disks: 4
-len: 15
 number of states until reach final: 60
-time: 0.003183999999976095 seconds
+time: 0.007563110999967648 seconds
 
-towers: 4 disks: 4
-len: 9
-number of states until reach final: 238
-time: 0.027709333000018432 seconds
-
-towers: 8 disks: 3
-len: 5
-number of states until reach final: 299
-time: 0.10326044499998943 seconds
-
-towers: 8 disks: 4
+towers: 5 disks: 4 start: 0 end: 1
 len: 7
-number of states until reach final: 3318
-time: 4.18982444400001 seconds
+number of states until reach final: 535
+time: 0.10389955599998757 seconds
 
-towers: 5 disks: 4
+towers: 5 disks: 4 start: 2 end: 3
 len: 7
-number of states until reach final: 384
-time: 0.07404755499999283 seconds
+number of states until reach final: 417
+time: 0.08089466699993864 seconds
 
-towers: 9 disks: 3
+towers: 5 disks: 5 start: 3 end: 2
+len: 11
+number of states until reach final: 3055
+time: 1.7192848890000505 seconds
+
+towers: 6 disks: 3 start: 0 end: 1
 len: 5
-number of states until reach final: 447
-time: 0.18365600000004179 seconds
+number of states until reach final: 164
+time: 0.03054399999996349 seconds
 
-towers: 9 disks: 4
+towers: 6 disks: 3 start: 5 end: 1
+len: 5
+number of states until reach final: 119
+time: 0.02356755499999963 seconds
+
+towers: 6 disks: 4 start: 1 end: 0
 len: 7
-number of states until reach final: 5528
-time: 11.97733733399997 seconds
+number of states until reach final: 1164
+time: 0.4277137770000081 seconds
 
-towers: 6 disks: 3
-len: 5
-number of states until reach final: 111
-time: 0.019399999999961892 seconds
-
-towers: 8 disks: 4
+towers: 6 disks: 4 start: 1 end: 2
 len: 7
-number of states until reach final: 3318
-time: 4.003892000000008 seconds
+number of states until reach final: 1034
+time: 0.3757022219999726 seconds
 
-towers: 5 disks: 3
+towers: 7 disks: 3 start: 0 end: 1
 len: 5
-number of states until reach final: 59
-time: 0.007410222000032718 seconds
+number of states until reach final: 269
+time: 0.06328933400004644 seconds
 
-towers: 9 disks: 3
+towers: 7 disks: 4 start: 2 end: 0
+len: 7
+number of states until reach final: 2221
+time: 1.4965222219999532 seconds
+
+towers: 8 disks: 3 start: 0 end: 1
 len: 5
-number of states until reach final: 447
-time: 0.18424177800000052 seconds
+number of states until reach final: 412
+time: 0.1279542219999712 seconds
 
 Average:
- - moves: 789.72
- - time: 0.912545351079998
+ - moves: 506.04
+ - time: 0.19614277335999306

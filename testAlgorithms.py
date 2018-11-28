@@ -4,13 +4,15 @@ import time
 
 instances = []
 
-file = open("instante.txt", 'r')
+file = open("instante - Copy.txt", 'r')
 
 for i in range(25):
     inst = file.readline()
     n = int(inst[0])
     m = int(inst[2])
-    instances.append((n, m))
+    poz_init = int(inst[4])
+    poz_final = int(inst[6])
+    instances.append((n, m, poz_init, poz_final))
 
 file.close()
 
@@ -32,7 +34,7 @@ for inst in instances:
     print(inst)
     n = inst[0]
     m = inst[1]
-    hanoi = Hanoi(n, m)
+    hanoi = Hanoi(n, m, inst[2], inst[3])
     ids = IterativeDeepeningSearch(hanoi, compute_height(n, m))
     
     start = time.perf_counter()
@@ -42,7 +44,7 @@ for inst in instances:
     count_moves += result[2]
     count_time += end
 
-    string = "towers: " + str(n) + " disks: " + str(m) + '\n' + "len: " + str(result[1]) + "\n" + "number of states until reach final: " + str(result[2]) + "\n" + "time: " + str(end) + " seconds" +"\n\n"
+    string = "towers: " + str(n) + " disks: " + str(m) + " start: " + str(inst[2]) + " end: " + str(inst[3]) + '\n' + "len: " + str(result[1]) + "\n" + "number of states until reach final: " + str(result[2]) + "\n" + "time: " + str(end) + " seconds" +"\n\n"
     # print(string)
     file_write.write(string)
 string = "Average:" + "\n" + " - moves: " + str(count_moves / 25) + "\n" + " - time: " + str(count_time / 25)
@@ -59,7 +61,7 @@ for inst in instances:
     n = inst[0]
     m = inst[1]
 
-    hanoi = Hanoi(n, m)
+    hanoi = Hanoi(n, m, inst[2], inst[3])
     uc = UniformCost(hanoi)
     
     start = time.perf_counter()
@@ -68,7 +70,7 @@ for inst in instances:
     
     count_moves += uc.no_transitions
     count_time += end
-    string = "towers: " + str(n) + " disks: " + str(m) + '\n' + "len: " + str(uc.result[0][1]) + "\n" + "number of states until reach final: " + str(uc.no_transitions) + "\n" + "time: " + str(end) + " seconds" + "\n\n"
+    string = "towers: " + str(n) + " disks: " + str(m) + " start: " + str(inst[2]) + " end: " + str(inst[3]) + '\n' + "len: " + str(uc.result[0][1]) + "\n" + "number of states until reach final: " + str(uc.no_transitions) + "\n" + "time: " + str(end) + " seconds" + "\n\n"
     # print(string)
     file_write.write(string)
 string = "Average:" + "\n" + " - moves: " + str(count_moves / 25) + "\n" + " - time: " + str(count_time / 25)
