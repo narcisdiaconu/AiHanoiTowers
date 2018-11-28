@@ -30,5 +30,5 @@ class GenericAI:
             self.hanoi.init()
             result = self.play(moves_count)
             if result:
-                return True
-        return False
+                return i
+        return -1

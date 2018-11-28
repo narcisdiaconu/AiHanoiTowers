@@ -1,36 +1,47 @@
-towers: 3 disks: 3
-avg: 19.5
+sample_size: 100  number_of_attempts: 100  tolerance: 4
+
+towers: 3  disks: 3
+avg: 16.56
 failed: 0
+duration: 0.4439958783268203
 
-towers: 3 disks: 4
-avg: 45.0
-failed: 1
-
-towers: 3 disks: 5
-avg: -1
-failed: 2
-
-towers: 4 disks: 3
-avg: 16.5
+towers: 3  disks: 4
+avg: 33.28
 failed: 0
+duration: 2.6705636792087724
 
-towers: 4 disks: 4
-avg: 38.0
-failed: 0
+towers: 3  disks: 5
+avg: 86.44680851063829
+failed: 53
+duration: 67.61448536288735
 
-towers: 4 disks: 5
-avg: 73.0
+towers: 4  disks: 3
+avg: 17.48
 failed: 0
+duration: 1.0643126007433068
 
-towers: 5 disks: 3
-avg: 14.5
+towers: 4  disks: 4
+avg: 41.06
 failed: 0
+duration: 9.27090033034554
 
-towers: 5 disks: 4
-avg: 26.5
-failed: 0
+towers: 4  disks: 5
+avg: 84.61290322580645
+failed: 7
+duration: 57.4732414074857
 
-towers: 5 disks: 5
-avg: 72.5
+towers: 5  disks: 3
+avg: 17.72
 failed: 0
+duration: 4.081711906523054
+
+towers: 5  disks: 4
+avg: 41.34375
+failed: 4
+duration: 23.14666261899933
+
+towers: 5  disks: 5
+avg: 81.2258064516129
+failed: 38
+duration: 136.7317801165139
 

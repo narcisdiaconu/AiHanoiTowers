@@ -84,6 +84,10 @@ class Hanoi:
     def state_copy(self):
         return [i for i in self.state]
 
+    @property
+    def stable_state(self):
+        return tuple(self.state)
+
     def __str__(self):
         s = ""
         for tower in range(self.towers_count):
