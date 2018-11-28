@@ -11,7 +11,7 @@ class Hanoi:
     def init(self):
         self.state_history = []
         self.moves_history = []
-        self.state = [poz_init] * self.disks_count
+        self.state = [self.poz_init] * self.disks_count
 
     def tower(self, tower_index):
        return [disk for disk in range(self.disks_count) if self.disk_position(disk) == tower_index][::-1]
