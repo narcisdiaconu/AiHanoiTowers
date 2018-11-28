@@ -33,19 +33,24 @@ def average(towers_count, disks_count, ai, sample_size=1000, number_of_attempts=
 
 
 def calculate(towers_max_count, disks_max_count, ai, filename, sample_size=1000, number_of_attempts=1000, tolerance=4):
-    string = "sample_size: {}  number_of_attempts: {}  tolerance: {}\n\n".format(
+    big_string = "sample_size: {}  number_of_attempts: {}  tolerance: {}\n\n".format(
         sample_size, number_of_attempts, tolerance)
 
     for i in range(3, towers_max_count + 1):
         for j in range(3, disks_max_count + 1):
             stats = average(i, j, ai, sample_size=sample_size, number_of_attempts=number_of_attempts)
 
+            string = ""
             string += "towers: {}  disks: {}\n".format(i, j)
             string += "avg length: {}\n".format(stats.avg_length)
             string += "avg attempts: {}\n".format(stats.avg_attempts)
             string += "fails: {}\n".format(stats.fails)
             string += "duration: {}\n\n".format(stats.duration)
 
+            print(string)
+            big_string += string
+
+
     fd = open(filename, "w")
-    fd.write(string)
+    fd.write(big_string)
     fd.close()
