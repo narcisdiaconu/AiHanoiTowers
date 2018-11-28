@@ -28,7 +28,7 @@ class UniformCost:
             del bfs_list[0]
 
 if __name__ == "__main__":
-    h = Hanoi(5, 6)
+    h = Hanoi(4, 4, 1, 2)
     uc = UniformCost(h)
     uc.run()
     print(uc.result)

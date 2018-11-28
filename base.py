@@ -1,7 +1,11 @@
 class Hanoi:
-    def __init__(self, towers_count, disks_count):
+    def __init__(self, towers_count, disks_count, poz_init = 0, poz_final = -1):
         self.towers_count = towers_count
         self.disks_count = disks_count
+        self.poz_init = poz_init;
+        self.poz_final = poz_final - 1;
+        if poz_final == -1:
+            self.poz_final = towers_count-1;
         self.init()
 
     def init(self):
@@ -62,7 +66,7 @@ class Hanoi:
         return -1
 
     def end(self):
-        if self.state[0] == 0:
+        if self.state[0] != self.poz_final:
             return False
         else :
             for i in range(self.disks_count-1):
