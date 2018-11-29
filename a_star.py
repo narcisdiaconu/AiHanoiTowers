@@ -28,9 +28,10 @@ class AStar():
 
         return path
 
-    def play(self):
+    def solution(self):
         closed_set = []
         open_set = [self.hanoi]
+        self.evaluated_states_count = 1
 
         came_from = dict()
         g_score = dict()
@@ -39,12 +40,12 @@ class AStar():
 
         while open_set:
             current = self.largest_f_score(open_set, g_score)
-            # print(current)
             if current.end():
                 return self.reconstruct(came_from, current)
 
             open_set.remove(current)
             closed_set.append(current)
+            self.evaluated_states_count += 1
 
             for neighbor in getAccesibleStates(current, []):
                 if neighbor.state in [hanoi.state for hanoi in closed_set]:
@@ -59,12 +60,3 @@ class AStar():
 
                 came_from[neighbor.stable_state] = current.stable_state
                 g_score[neighbor.stable_state] = tentative_g_score
-                
-
-
-hanoi = Hanoi(3, 3)
-astar = AStar(hanoi)
-
-hanoi = astar.play()
-
-print(hanoi)
