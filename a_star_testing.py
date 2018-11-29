@@ -1,7 +1,7 @@
 from base import *
 import time
 
-def calculate(ai, read_filename, write_filename):
+def calculate(ai, read_filename, write_filename, sample_size=1):
     big_string = ""
 
     with open(read_filename, "r") as fd:
@@ -13,8 +13,9 @@ def calculate(ai, read_filename, write_filename):
             ai.hanoi = Hanoi(towers_count, disks_count, pos_start, pos_end)
 
             start = time.perf_counter()
-            result = ai.solution()
-            duration = time.perf_counter() - start
+            for i in range(sample_size):
+                result = ai.solution()
+            duration = (time.perf_counter() - start) / sample_size
 
             string = ""
             string += "towers: {}  disks: {}  start: {}  end: {}\n".format(towers_count, disks_count, pos_start, pos_end)

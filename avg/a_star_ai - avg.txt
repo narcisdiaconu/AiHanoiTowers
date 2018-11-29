@@ -1,125 +1,125 @@
 towers: 3  disks: 3  start: 0  end: 1
 solution length: 10
 evaluated states: 10
-duration: 0.0009265835460057792
+duration: 0.0007480670689413651
 
 towers: 3  disks: 3  start: 0  end: 2
 solution length: 10
 evaluated states: 10
-duration: 0.0008952443307170752
+duration: 0.0006212119667472046
 
 towers: 3  disks: 4  start: 0  end: 1
 solution length: 30
 evaluated states: 43
-duration: 0.0038388650824126964
+duration: 0.004122324508889954
 
 towers: 3  disks: 4  start: 0  end: 2
 solution length: 30
 evaluated states: 43
-duration: 0.003557189725721454
+duration: 0.004268856107314535
 
 towers: 3  disks: 5  start: 0  end: 1
 solution length: 82
 evaluated states: 82
-duration: 0.010912088214982487
+duration: 0.01206604343162142
 
 towers: 3  disks: 5  start: 2  end: 1
 solution length: 162
 evaluated states: 162
-duration: 0.05045726935753476
+duration: 0.037715092550744046
 
 towers: 4  disks: 3  start: 0  end: 1
 solution length: 21
 evaluated states: 23
-duration: 0.005226474915978815
+duration: 0.0034424005989943537
 
 towers: 4  disks: 3  start: 2  end: 3
 solution length: 20
 evaluated states: 21
-duration: 0.0030308419412340692
+duration: 0.00330412140887519
 
 towers: 4  disks: 3  start: 3  end: 2
 solution length: 20
 evaluated states: 21
-duration: 0.005064492706835996
+duration: 0.0033295465744160994
 
 towers: 4  disks: 4  start: 1  end: 0
 solution length: 48
 evaluated states: 64
-duration: 0.029486425777599565
+duration: 0.023204099471424485
 
 towers: 4  disks: 4  start: 1  end: 2
 solution length: 53
 evaluated states: 56
-duration: 0.030862708183952883
+duration: 0.01945114688312624
 
 towers: 4  disks: 5  start: 1  end: 0
 solution length: 222
 evaluated states: 299
-duration: 0.6080272190524305
+duration: 0.46602819849730354
 
 towers: 4  disks: 5  start: 3  end: 0
 solution length: 225
 evaluated states: 289
-duration: 0.5776968999474784
+duration: 0.4843353779339453
 
 towers: 5  disks: 3  start: 1  end: 0
 solution length: 29
 evaluated states: 31
-duration: 0.02152060138066214
+duration: 0.010339290804885423
 
 towers: 5  disks: 3  start: 1  end: 4
 solution length: 32
 evaluated states: 36
-duration: 0.01860265613064893
+duration: 0.012521873073157394
 
 towers: 5  disks: 4  start: 0  end: 1
 solution length: 104
 evaluated states: 105
-duration: 0.1751986736337896
+duration: 0.10452113754555034
 
 towers: 5  disks: 4  start: 2  end: 3
 solution length: 115
 evaluated states: 117
-duration: 0.12369399483997934
+duration: 0.12245695558780108
 
 towers: 5  disks: 5  start: 3  end: 2
 solution length: 199
 evaluated states: 199
-duration: 0.6152960290948746
+duration: 0.48129469057055874
 
 towers: 6  disks: 3  start: 0  end: 1
 solution length: 29
 evaluated states: 29
-duration: 0.014294080399813058
+duration: 0.012830738408549223
 
 towers: 6  disks: 3  start: 5  end: 1
 solution length: 31
 evaluated states: 31
-duration: 0.0171750227209313
+duration: 0.015215390273289359
 
 towers: 6  disks: 4  start: 1  end: 0
 solution length: 141
 evaluated states: 141
-duration: 0.3557476687210843
+duration: 0.32015805423496635
 
 towers: 6  disks: 4  start: 1  end: 2
 solution length: 65
 evaluated states: 65
-duration: 0.0744008074190119
+duration: 0.08657998126443545
 
 towers: 7  disks: 3  start: 0  end: 1
 solution length: 29
 evaluated states: 29
-duration: 0.013572145705451177
+duration: 0.02073501938311574
 
 towers: 7  disks: 4  start: 2  end: 0
 solution length: 146
 evaluated states: 146
-duration: 0.4800023712080965
+duration: 0.46600182371578147
 
 towers: 8  disks: 3  start: 0  end: 1
 solution length: 29
 evaluated states: 29
-duration: 0.023780423109613036
+duration: 0.02246221264677024
 
